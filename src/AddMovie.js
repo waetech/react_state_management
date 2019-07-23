@@ -4,6 +4,7 @@ import {MovieContext} from './MovieContext';
 const AddMovie = () => {
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
+    const [genre, setGenre] = useState('');
     const [movies, setMovies] = useContext(MovieContext);
 
     const updateName = e => {
@@ -14,12 +15,17 @@ const AddMovie = () => {
         setPrice(e.target.value);
     }
 
+    const updateGenre = e => {
+        setGenre(e.target.value);
+    }
+
     const addMovie = e => {
         e.preventDefault();
-        setMovies(prevMovies => [...prevMovies, {name: name, price: price }]);
+        setMovies(prevMovies => [...prevMovies, {name: name, price: price, genre: genre }]);
         
     };
 
+    
 
     return(
         <form onSubmit={addMovie}>
@@ -31,6 +37,7 @@ const AddMovie = () => {
             onChange={updatePrice}>
                 
             </input>
+            <input type="text" name="genre" value={genre} onChange={updateGenre}></input>
             <button>Submit</button>
         </form>
     );
