@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const Movie = ({ name, price, genre, year }) => {
+const Movie = ({ name, price, genre, year, review }) => {
 
     return (
         <div>
@@ -10,6 +10,7 @@ const Movie = ({ name, price, genre, year }) => {
            <p>{price}</p>
            <p>{genre}</p>
            <p>{year}</p>
+           <p>{review}</p>
         </div>
     );
 };

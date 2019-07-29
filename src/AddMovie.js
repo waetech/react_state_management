@@ -6,6 +6,7 @@ const AddMovie = () => {
     const [price, setPrice] = useState('');
     const [genre, setGenre] = useState('');
     const [year, setYear] = useState('');
+    const [review, setReview] = useState('');
     const [movies, setMovies] = useContext(MovieContext);
 
     const updateName = e => {
@@ -24,9 +25,13 @@ const AddMovie = () => {
         setYear(e.target.value);
     }
 
+    const updateReview = e => {
+        setReview(e.target.value);
+    }
+
     const addMovie = e => {
         e.preventDefault();
-        setMovies(prevMovies => [...prevMovies, {name: name, price: price, genre: genre, year: year }]);
+        setMovies(prevMovies => [...prevMovies, {name: name, price: price, genre: genre, year: year, review: review }]);
         
     };
 
@@ -44,6 +49,7 @@ const AddMovie = () => {
             </input>
             <input type="text" name="genre" value={genre} onChange={updateGenre}></input>
             <input type="text" name="genre" value={year} onChange={updateYear}></input>
+            <input type="text" name="genre" value={review} onChange={updateReview}></input>
             <button>Submit</button>
         </form>
     );

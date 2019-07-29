@@ -9,6 +9,7 @@ export const MovieProvider = props => {
             price: '$10',
             genre: 'action',
             year: '2005',
+            review: 'This was excellent',
             id: 23134
         },
         {
@@ -16,6 +17,7 @@ export const MovieProvider = props => {
             price: '$10',
             genre: 'action',
             year: '2014',
+            review: 'This was excellent',
             id: 2675
         },
         {
@@ -23,6 +25,7 @@ export const MovieProvider = props => {
             price: '$10',
             genre: 'drama',
             year: '2013',
+            review: 'This was excellent',
             id: 9057
         },
         {
@@ -30,6 +33,7 @@ export const MovieProvider = props => {
             price: '$12',
             genre: 'action',
             year: '1984',
+            review: 'This was excellent',
             id: 5678
         }
     ]);
